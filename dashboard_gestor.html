@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Painel Gestor - Ínicio</title>
+        <link rel="stylesheet" href="dashboard_gestor.css">
+    </head>                    
+
+<body>
+    <header>
+        <!-- nome do sistema, perfil logado -->
+         <h1>Fala Fácil</h1>
+         <span>Gestor</span>
+    </header>
+    <main>
+        
+        <div class="Menu">
+            <nav>
+                <ul class="nav">
+                    <li><a href="#" onclick="mostrarSecao('cadastro-aluno')"> Cadastro Aluno</a></li>
+                    <li><a href="#" onclick="mostrarSecao('lancar-notas-faltas')"> Lançar Notas e Faltas</a></li>
+                    <li><a href="#" onclick="mostrarSecao('consultar-alunos-matriculados')"> Consultar Alunos Matriculados</a></li>
+                    <li><a href="#" onclick="mostrarSecao('consultar-horario-turma-aula')"> Consultar Horário de Turma e Aula</a></li>
+                    <li><a href="#" onclick="mostrarSecao('lancar-comunicado')"> Lançar Comunicados</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+
+        <div class="Conteúdo">
+            <section id="home">
+                <h2>Olá gestor, bem vindo!</h2>
+            </section>             
+
+            <section id="cadastro-aluno" style="display: none;">
+                <h2>Cadastro de Aluno</h2>
+                <input type="text" placeholder="Inserir Nome">
+                <input type="tel" placeholder="Inserir Telefone">
+                <input type="text" placeholder="Inserir Nível de Estudo">
+                <input type="password" placeholder="Inserir Senha">
+                <input type="text" placeholder="Inserir RG/CPF">
+                <input type="email" placeholder="Inserir E-Mail">
+                <button type="submit">Cadastrar</button>
+            </section>
+
+            <section id="lancar-notas-faltas" style="display: none;">
+                <h2>Lançar Notas e Faltas</h2>
+                <input type="date" placeholder="Inserir Data da Avaliação">
+                <input type="number" id="nota-prova" placeholder="Inserir Prova - Nota">
+                <input type="number" id="nota-trabalho" placeholder="Inserir Trabalho - Nota">
+                <input type="text" placeholder="Inserir Trabalho - Comentário">
+                <input type="text" placeholder="Inserir Aluno">
+                <input type="text" placeholder="Inserir Turma"> 
+                <input type="number" id="nota-final" placeholder="Nota Final" readonly>
+                <button onclick="calcularNota()">Calcular Nota Final</button>              
+            </section>
+                       
+            <section id="consultar-alunos-matriculados" style="display: none;">
+                <h2>Consultar Aluno Matriculados</h2>
+            </section>
+
+            <section id="consultar-horario-turma-aula" style="display: none;">
+                <h2>Consultar Horário Turma e Aula</h2>
+            </section>
+
+            <section id="lancar-comunicado" style="display: none;">
+                <h2>Lançar Comunicado</h2>
+            </section>
+        </div>
+    </main>
+    <script src="dashboard_gestor.js"></script>
+</body>
+</html>

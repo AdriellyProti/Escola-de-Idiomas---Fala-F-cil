@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Painel Aluno - Ínicio</title>
+        <link rel="stylesheet" href="dashboard_aluno.css">
+    </head>                    
+
+<body>
+    <header>
+        <!-- nome do sistema, perfil logado -->
+         <h1>Fala Fácil</h1>
+         <span>Aluno</span>
+    </header>
+    <main>
+        
+        <div class="Menu">
+            <nav>
+                <ul class="nav">
+                    <li><a href="#" onclick="mostrarSecao('consultar-notas')"> Consultar Notas</a></li>
+                    <li><a href="#" onclick="mostrarSecao('consultar-horario-turma-aula')"> Consultar Horário de Turma e Aula</a></li>
+                    <li><a href="#" onclick="mostrarSecao('consultar-comunicado')"> Consultar Comunicados</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="Conteúdo">
+            <section>
+                <h2>Olá aluno, bem vindo!</h2>
+            </section>
+            
+            <section id="consultar-notas" style="display: none;">
+                <h2>Consultar Notas</h2>
+            </section>
+
+            <section id="consultar-horario-turma-aula" style="display: none;">
+                <h2>Consultar Horário Turma e Aula</h2>
+            </section>        
+
+            <section id="consultar-comunicado" style="display: none;">
+                <h2>Consultar Comunicado</h2>
+            </section>
+        </div>
+    </main>
+    <script src="dashboard_aluno.js"></script>
+</body>
+</html>
